@@ -38,7 +38,11 @@ public class BookController {
 		return new ResponseEntity<>(bookService.모두가져오기(),HttpStatus.OK);
 	}
 	
-
+	@CrossOrigin
+	@GetMapping("/book/search")
+	public ResponseEntity<?> findBySearch(@RequestParam(value = "keyword") String keyword, Book book){
+		return new ResponseEntity<>(bookService.검색가져오기(keyword),HttpStatus.OK);
+	}
 	
 	@CrossOrigin
 	@GetMapping("/book/{id}")

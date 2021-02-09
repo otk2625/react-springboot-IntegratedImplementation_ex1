@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cos.book.domain.Book;
@@ -37,8 +36,6 @@ public class BookController {
 	public ResponseEntity<?> findAll(){
 		return new ResponseEntity<>(bookService.모두가져오기(),HttpStatus.OK);
 	}
-	
-
 	
 	@CrossOrigin
 	@GetMapping("/book/{id}")

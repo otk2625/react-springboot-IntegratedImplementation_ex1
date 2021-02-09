@@ -39,6 +39,12 @@ public class BookService {
 		
 	}
 	
+	@Transactional(readOnly = true) 
+	public List<Book> 검색가져오기(String search){
+		List<Book> books = bookRepository.findByTitleContaining(search);
+		return books;
+		
+	}
 	
 	@Transactional
 	public Book 수정하기(Long id, Book book) {

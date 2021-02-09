@@ -39,7 +39,6 @@ public class BookService {
 		
 	}
 	
-	
 	@Transactional
 	public Book 수정하기(Long id, Book book) {
 		//더티체킹 update치기
